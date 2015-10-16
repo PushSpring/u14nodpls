@@ -1,2 +1,2 @@
-# u14nodpls
-Docker image for node.js with services and tools pre-installed.
+# u14nod
+Ubuntu 14.04 + node.js image
