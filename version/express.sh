@@ -1,3 +1,3 @@
 #!/bin/bash -e
 
-npm install -g express
+. /root/.nvm/nvm.sh && npm install -g express

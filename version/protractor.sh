@@ -1,3 +1,3 @@
 #!/bin/bash -e
 
-npm install -g protractor
+. /root/.nvm/nvm.sh && npm install -g protractor

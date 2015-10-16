@@ -1,3 +1,3 @@
 #!/bin/bash -e
 
-npm install -g angular
+. /root/.nvm/nvm.sh && npm install -g angular
