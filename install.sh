@@ -8,6 +8,13 @@
 # # add source of nvm to .bashrc - allows user to use nvm as a command
 # echo "source ~/.nvm/nvm.sh" >> .bashrc
 
+
+echo "================= Updating global nodejs packages ==================="
+sudo npm install -g grunt-cli mocha vows phantomjs casperjs;
+
+echo "=============== Installing bower globally ============="
+sudo npm install -g bower
+
 for file in /tmp/version/*;
 do
   $file
