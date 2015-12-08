@@ -20,7 +20,7 @@ echo "=============== Installing bower globally ============="
 sudo npm install -g bower
 
 # Use 4.2.2 as default
-/root/.nvm/nvm.shnvm alias default 4.2.2
+/root/.nvm/nvm.sh && nvm alias default 4.2.2
 
 virtualenv ve && source ve/bin/activate && pip install awscli
 apt-get update
