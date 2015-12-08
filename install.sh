@@ -23,5 +23,5 @@ sudo npm install -g bower
 /root/.nvm/nvm.sh && nvm alias default 4.2.2
 
 virtualenv ve && source ve/bin/activate && pip install awscli
-apt-get update
-apt-get install -y -q libpq-dev
+sudo apt-get update -y
+sudo apt-get install -y -q libpq-dev
