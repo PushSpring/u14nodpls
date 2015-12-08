@@ -19,10 +19,8 @@ sudo npm install -g grunt-cli mocha vows phantomjs casperjs gulp;
 echo "=============== Installing bower globally ============="
 sudo npm install -g bower
 
-nvm alias default 4.2.2
-
-# # tell nvm to use this version as default
-# . /root/.nvm/nvm.sh && nvm alias default 0.12
+# Use 4.2.2 as default
+/root/.nvm/nvm.shnvm alias default 4.2.2
 
 virtualenv ve && source ve/bin/activate && pip install awscli
 apt-get update
