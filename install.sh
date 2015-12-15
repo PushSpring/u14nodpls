@@ -15,7 +15,7 @@ sudo npm install -g grunt-cli mocha vows phantomjs casperjs;
 echo "=============== Installing bower globally ============="
 sudo npm install -g bower
 
-for file in /tmp/version/*;
+for file in /u14nodpls/version/*;
 do
   $file
 done
