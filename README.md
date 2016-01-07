@@ -7,15 +7,16 @@ Shippable CI image for node.js on ubuntu 14.04 with commonly used services. Avai
 2. 0.12
 3. 4.23
 
-Services
-1. elasticsearch 1.5
-2. memcached 1.4
-3. mongodb 3.0
-4. mysql 5.6
-5. postgres 9.4
-6. rabbitmq 3.5
-7. redis 3.0
-8. selenium 2.45
+**Services:**
+
+1. elasticsearch 1.5 
+2. memcached 1.4 
+3. mongodb 3.0 
+4. mysql 5.6 
+5. postgres 9.4 
+6. rabbitmq 3.5 
+7. redis 3.0 
+8. selenium 2.45 
 9. sqllite 3
 
 ## How to use
@@ -33,6 +34,17 @@ node_js:
   - 4.23
 
 build_image: drydock/u14nodpls:prod
+
+services:
+  - elasticsearch
+  - memcached
+  - mongodb
+  - mysql
+  - postgres
+  - rabbitmq
+  - redis
+  - selenium
+  - sqllite
 
 before_install:
   # activate the nvm
