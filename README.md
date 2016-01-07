@@ -1,4 +1,4 @@
-u12nodpls
+u14nodpls
 ================
 
 Shippable CI image for node.js on ubuntu 14.04 with commonly used services. Available versions are:
@@ -28,10 +28,9 @@ directive in the YML will be available in the `$SHIPPABLE_NODE_VERSION` environm
 ````
 language: node_js
 node_js:
-  - 0.8
   - 0.10
-  - 0.11
   - 0.12
+  - 4.23
 
 build_image: drydock/u14nodpls:prod
 
