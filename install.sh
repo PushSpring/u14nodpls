@@ -21,6 +21,8 @@ do
 
 done
 
+cat /etc/apt/sources.list
+
 echo "Installing awscli"
 virtualenv ve && source ve/bin/activate && pip install awscli
 echo "Updating packages"
