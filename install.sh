@@ -19,6 +19,9 @@ do
   $file
 done
 
+echo "=============== Update npm ============="
+sudo npm install npm@2.15.1 -g
+
 virtualenv ve && source ve/bin/activate && pip install awscli
 sudo apt-get update -y
 sudo apt-get install -y -q libpq-dev
