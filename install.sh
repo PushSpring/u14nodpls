@@ -8,19 +8,24 @@
 # # add source of nvm to .bashrc - allows user to use nvm as a command
 # echo "source ~/.nvm/nvm.sh" >> .bashrc
 
-echo "================= Updating global nodejs packages ==================="
-sudo npm install -g grunt-cli mocha vows phantomjs casperjs gulp;
-
-echo "=============== Installing bower globally ============="
-sudo npm install -g bower
 
 for file in /u14nodpls/version/*;
 do
   $file
+# Needs to be done per version since nvm use switches them out
+  echo "================= Updating global nodejs packages ==================="
+  sudo npm install -g grunt-cli mocha vows phantomjs casperjs gulp;
+
+  echo "=============== Installing bower globally ============="
+  sudo npm install -g bower
+
 done
 
-#virtualenv ve && source ve/bin/activate && pip install awscli
+echo "Installing awscli"
+virtualenv ve && source ve/bin/activate && pip install awscli
+echo "Updating packages"
 sudo apt-get update -y
+echo "Installing libpq-dev"
 sudo apt-get install -y -q libpq-dev
 
 # Use 4.2.2 as default
