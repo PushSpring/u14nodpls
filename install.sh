@@ -19,7 +19,7 @@ do
   $file
 done
 
-virtualenv ve && source ve/bin/activate && pip install awscli
+#virtualenv ve && source ve/bin/activate && pip install awscli
 sudo apt-get update -y
 sudo apt-get install -y -q libpq-dev
 
