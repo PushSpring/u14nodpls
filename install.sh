@@ -24,11 +24,11 @@ done
 cat /etc/apt/sources.list
 
 echo "Installing awscli"
-virtualenv ve && source ve/bin/activate && pip install awscli
+#virtualenv ve && source ve/bin/activate && pip install awscli
 echo "Updating packages"
-sudo apt-get update -y
+#sudo apt-get update -y
 echo "Installing libpq-dev"
-sudo apt-get install -y -q libpq-dev
+#sudo apt-get install -y -q libpq-dev
 
 # Use 4.2.2 as default
 . /root/.nvm/nvm.sh && nvm alias default 4.2.2 && nvm use 4.2.2
