@@ -1,5 +1,33 @@
 language: python
 
-install: true
+python:
+  - 2.7
 
-script: true
+build:
+  pre_ci:
+    # Always pull the latest base image to avoid any cached images on the host
+    - docker pull drydock/u14pls:prod
+    - docker build --rm -t pushspring/u14nodpls:tip .
+
+  pre_ci_boot:
+    image_name: pushspring/u14nodpls
+    image_tag: tip
+    pull: false
+
+  ci:
+    - . ~/.nvm/nvm.sh
+    - nvm ls
+    - nvm use 0.10
+    - nvm use 0.12
+    - nvm use iojs-1.0.0
+    - nvm use iojs-2.0.0
+    - nvm use 4.2.2
+    - nvm use 4.2.3
+
+  on_success:
+    - if [ "$IS_PULL_REQUEST" != true ]; then docker push pushspring/u14nodpls:tip; fi
+
+integrations:
+  hub:
+    - integrationName: "chriskinsman"
+      type: "docker"

@@ -8,20 +8,20 @@
 # # add source of nvm to .bashrc - allows user to use nvm as a command
 # echo "source ~/.nvm/nvm.sh" >> .bashrc
 
-for file in /tmp/version/*;
-do
-  $file
-done
-
 echo "================= Updating global nodejs packages ==================="
 sudo npm install -g grunt-cli mocha vows phantomjs casperjs gulp;
 
 echo "=============== Installing bower globally ============="
 sudo npm install -g bower
 
-# Use 4.2.2 as default
-. /root/.nvm/nvm.sh && nvm alias default 4.2.2
+for file in /u14nodpls/version/*;
+do
+  $file
+done
 
 virtualenv ve && source ve/bin/activate && pip install awscli
 sudo apt-get update -y
 sudo apt-get install -y -q libpq-dev
+
+# Use 4.2.2 as default
+. /root/.nvm/nvm.sh && nvm alias default 4.2.2
