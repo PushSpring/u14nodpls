@@ -23,6 +23,7 @@ build:
     - nvm use iojs-2.0.0
     - nvm use 4.2.2
     - nvm use 4.2.3
+    - nvm alias default 4.2.2
 
   on_success:
     - if [ "$IS_PULL_REQUEST" != true ]; then docker push pushspring/u14nodpls:tip; fi
